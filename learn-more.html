@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn More — Void Watch</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  .learn-hero {
+    padding: 120px 5rem 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .product-showcase-static {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(91,141,238,.1) 0%, transparent 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 40px 0;
+  }
+  .product-showcase-static img {
+    width: 380px;
+    height: auto;
+    filter: drop-shadow(0 40px 60px rgba(0,0,0,.8));
+  }
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    padding: 0 5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .detail-block {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 3rem;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+  .detail-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(91,141,238,.3), transparent);
+  }
+  .detail-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--chalk);
+    margin-bottom: 1rem;
+  }
+  .detail-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--mist);
+  }
+</style>
+  <script type="module" crossorigin src="/product-showcase-website/assets/main-Dg6eJ_7x.js"></script>
+  <link rel="stylesheet" crossorigin href="/product-showcase-website/assets/main-DrOA96zE.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Ambient blobs -->
+<div class="ambient">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">AUR<span>A</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="browse-collection.html">Collection</a></li>
+    <li><a href="learn-more.html" style="color:var(--chalk)">Learn</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
+  </ul>
+  <a href="add-to-cart.html"><button class="nav-cta">Cart (0)</button></a>
+</nav>
+
+<section class="learn-hero">
+  <div class="s-eyebrow">Discover The Void</div>
+  <h1 class="hero-title" style="font-size: 5rem; margin-top:20px;">A TIMEPIECE BEYOND<br><em>TIME</em></h1>
+  
+  <div class="product-showcase-static">
+    <img src="/product-showcase-website/assets/watch-DTdajKRG.png" alt="Void Watch Detail">
+  </div>
+</section>
+
+<section class="details-grid">
+  <div class="detail-block">
+    <h3 class="detail-title">Perpetual Movement</h3>
+    <p class="detail-text">Driven by the kinetic energy of your wrist, the inner mechanisms are suspended in a vacuum-sealed titanium chassis. It requires no battery, only your movement.</p>
+  </div>
+  <div class="detail-block">
+    <h3 class="detail-title">Sapphire Enclosure</h3>
+    <p class="detail-text">The domed glass is carved from lab-grown sapphire, achieving a 9 on the Mohs scale. Almost entirely scratch-proof, it bends light to create the illusion of infinite depth.</p>
+  </div>
+  <div class="detail-block">
+    <h3 class="detail-title">Luminescent Matter</h3>
+    <p class="detail-text">The hands and indices are coated with our proprietary AURA-Glow compound, absorbing ambient light and emitting a cool, ethereal blue throughout the night.</p>
+  </div>
+  <div class="detail-block">
+    <h3 class="detail-title">Aerospace Titanium</h3>
+    <p class="detail-text">Forged from Grade 5 Titanium, the casing is 40% lighter than steel but significantly stronger. The matte "Void Black" finish absorbs light rather than reflecting it.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">AUR<span>A</span></div>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="contact-us.html">Contact</a>
+    <a href="#">Instagram</a>
+  </div>
+  <div class="footer-copy">© 2026 AURA — All rights reserved</div>
+</footer>
+
+</body>
+</html>
