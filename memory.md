@@ -1,27 +1,32 @@
 # Memory Log - Product Showcase Website Development
 
 ## Current State
-- The website leverages Vite (`localhost:5173`) for local development. We are not pushing to GitHub or Netlify until it is completely perfect locally.
-- Integrated a premium floating-product design pattern with smooth CSS animations.
-- The original product JPEGs have been entirely replaced with **brand new, ultra-high-resolution (4K) AI-generated imagery**.
-- Images are now tightly cropped and completely transparent, sitting beautifully inside the floating cards and the main hero section.
-- Fixed global cursor visibility to ensure the custom dot/circle cursor works without clashing with the native system cursor.
-- Established a strong 3D depth effect in the Hero section by placing the floating watch in front of the large "OBJECTS THAT LIVE" typography (`z-index` adjusted).
+- **Architecture:** Transitioned from a Single Page Application (SPA) to a **Multi-Page Site** (5 production-ready HTML pages).
+- **Styling & Interaction:** Extracted shared CSS (`src/style.css`) and JS (`src/main.js`) to ensure the premium AURA aesthetic (custom cursor, ambient blobs, typography) is consistent across all pages.
+- **Deployment:** Live on both GitHub Pages and Netlify.
+- **Custom Domain:** Configured `vite.config.js` with `base: '/'` to support the custom domain `auraog.run.place`.
+
+## Pages Overview
+1. **Home (`index.html`):** The primary hero showcase with floating cards and cinematic entrance animations.
+2. **Browse Collection (`browse-collection.html`):** Redesigned as a staggered editorial list with large product visuals and detailed feature copy.
+3. **Learn More (`learn-more.html`):** A high-fidelity deep-dive page for the "Void Watch" featuring a specs grid and detailed material showcase.
+4. **Add to Cart (`add-to-cart.html`):** A split-pane checkout preview with glassmorphic order summary cards.
+5. **Contact Us (`contact-us.html`):** A premium, glassmorphic contact form layout matching the dark-mode aesthetic.
+
+## Functional Features
+- **Persistent Cart:** Implemented `localStorage` logic in `main.js`. Cart count increments on all pages when "Add to Cart" or `+` is clicked and persists across page transitions.
+- **Interactive Buttons:** Fixed `pointer-events` and `cursor: none` issues on the hero section to ensure all CTA buttons (Explore Now, Learn More) are clickable.
+- **Visual Feedback:** Buttons show an "Added ✓" confirmation state for 1.5s after clicking.
 
 ## Assets & Python Processing
-- Created and ran Python scripts utilizing `rembg` and `Pillow` to:
-  - Remove all backgrounds from the 4K generated images.
-  - Surgically crop a stray shoebox out of the generated footwear image.
-  - Automatically trim and crop all transparent borders (`getbbox()`) so the images can be scaled to maximum size in CSS.
-- Final high-res, trimmed images are stored in `Product Images/HighRes/`.
+- Used Python scripts (`rembg`, `Pillow`) to generate high-resolution, transparent, and tightly cropped product assets.
+- Final production assets are stored in `Product Images/HighRes/`.
 
-## Design & CSS Changes
-- **Scaling:** Updated `.p-card-obj` containers to use `width: 100%` and `object-fit: contain` so the tightly-cropped PNGs dynamically max out their display size.
-- **Hero Image:** Scaled the main top watch to exactly `320px` to maintain premium balance.
-- **Upgrades:** Replaced the "Void Watch" (Card 1) with an ultra-luxury two-tone skeleton dial analog watch for enhanced visual impact.
-- **Clean UI:** Removed the overlapping `.hero-eyebrow` text that was previously clashing with the header.
+## Deployment & Hosting
+- **GitHub Pages:** [https://Bhavik1207.github.io/product-showcase-website/](https://Bhavik1207.github.io/product-showcase-website/)
+- **Netlify:** [https://auraog.netlify.app](https://auraog.netlify.app)
+- **Custom Domain Config:** DNS setup for `auraog.run.place` using CNAME pointing to GitHub Pages.
 
 ## Next Steps
-- Final review from the user regarding the current layout, sizes, and new high-res images.
-- If approved, proceed with GitHub integration and Netlify deployment.
-- Prepare codebase for future features (e.g., Shopping Cart or backend integration).
+- Monitor DNS propagation for `auraog.run.place`.
+- Final visual polish based on live testing.
