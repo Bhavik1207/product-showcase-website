@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add to Cart — AURA</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+<style>
+  .cart-container {
+    padding: 150px 5rem 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+  }
+  .cart-header {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: var(--chalk);
+    margin-bottom: 2rem;
+    font-weight: 300;
+  }
+  .cart-item {
+    display: flex;
+    gap: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 8px;
+    align-items: center;
+  }
+  .cart-item-img {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, #0f1e3a, #1a0f30);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cart-item-img img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,.5));
+  }
+  .cart-item-details {
+    flex: 1;
+  }
+  .cart-item-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: var(--chalk);
+    margin-bottom: .5rem;
+  }
+  .cart-item-meta {
+    font-size: .8rem;
+    color: var(--mist);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .cart-item-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: var(--glow1);
+  }
+  
+  .order-summary {
+    background: rgba(13,17,32, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    border-radius: 8px;
+    height: fit-content;
+  }
+  .summary-title {
+    font-size: 1rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--mist);
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    color: var(--chalk);
+  }
+  .summary-total {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .checkout-btn {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, var(--glow1), var(--glow2));
+    color: white;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: .9rem;
+    font-weight: 500;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    cursor: none;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(91,141,238,.3);
+    transition: box-shadow .3s, transform .2s;
+  }
+  .checkout-btn:hover {
+    box-shadow: 0 0 60px rgba(91,141,238,.6);
+    transform: translateY(-2px);
+  }
+</style>
+</head>
+<body>
+
+<!-- Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Ambient blobs -->
+<div class="ambient">
+  <div class="blob blob-2"></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">AUR<span>A</span></div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="browse-collection.html">Collection</a></li>
+    <li><a href="learn-more.html">Learn</a></li>
+    <li><a href="contact-us.html">Contact</a></li>
+  </ul>
+  <a href="add-to-cart.html"><button class="nav-cta" style="border-color:var(--glow1); color:white; background:rgba(91,141,238,.1);">Cart (1)</button></a>
+</nav>
+
+<section class="cart-container">
+  <div class="cart-items">
+    <h1 class="cart-header">Your Cart</h1>
+    
+    <div class="cart-item">
+      <div class="cart-item-img">
+        <img src="Product Images/HighRes/card1_watch.png" alt="Void Watch">
+      </div>
+      <div class="cart-item-details">
+        <div class="cart-item-title">Void Watch</div>
+        <div class="cart-item-meta">Grade 5 Titanium / Sapphire</div>
+        <div class="cart-item-price">$840.00</div>
+      </div>
+      <div style="font-family: 'Outfit'; font-size: 1.2rem; color: var(--mist);">Qty: 1</div>
+    </div>
+  </div>
+
+  <div class="order-summary">
+    <div class="summary-title">Order Summary</div>
+    <div class="summary-row">
+      <span>Subtotal</span>
+      <span>$840.00</span>
+    </div>
+    <div class="summary-row">
+      <span>Shipping</span>
+      <span>Complimentary</span>
+    </div>
+    <div class="summary-row summary-total">
+      <span>Total</span>
+      <span>$840.00</span>
+    </div>
+    
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">AUR<span>A</span></div>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="contact-us.html">Contact</a>
+    <a href="#">Instagram</a>
+  </div>
+  <div class="footer-copy">© 2026 AURA — All rights reserved</div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
