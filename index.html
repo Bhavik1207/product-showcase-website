@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AURA — Floating Product Showcase</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/product-showcase-website/assets/main-Dg6eJ_7x.js"></script>
+  <script type="module" crossorigin src="/product-showcase-website/assets/main-CH3WDGmh.js"></script>
   <link rel="stylesheet" crossorigin href="/product-showcase-website/assets/main-DrOA96zE.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
     <li><a href="learn-more.html">Learn</a></li>
     <li><a href="contact-us.html">Contact</a></li>
   </ul>
-  <a href="add-to-cart.html"><button class="nav-cta">Cart (0)</button></a>
+  <button class="nav-cta" onclick="window.location.href='add-to-cart.html'">Cart (<span class="cart-count">0</span>)</button>
 </nav>
 
 <!-- ══ HERO ══ -->
@@ -57,8 +57,8 @@
     <div class="hero-bottom">
       <p class="hero-desc">Products designed to breathe, move, and become part of your world. Not things — experiences.</p>
       <div class="hero-btns">
-        <a href="browse-collection.html"><button class="btn-glow">Explore Now</button></a>
-        <a href="learn-more.html"><button class="btn-ghost">Learn More</button></a>
+        <button class="btn-glow" onclick="window.location.href='browse-collection.html'">Explore Now</button>
+        <button class="btn-ghost" onclick="window.location.href='learn-more.html'">Learn More</button>
       </div>
       <div class="scroll-indicator">
         <div class="scroll-line"></div>
@@ -93,7 +93,7 @@
         <div class="p-card-desc">A timepiece that exists between moments. Sapphire glass, titanium case, perpetual movement.</div>
         <div class="p-card-footer">
           <div class="p-card-price">$840</div>
-          <a href="add-to-cart.html"><button class="p-card-btn">+</button></a>
+          <button class="p-card-btn add-to-cart-action">+</button>
         </div>
       </div>
     </div>
@@ -112,7 +112,7 @@
         <div class="p-card-desc">Dark matter distilled into scent. Notes of ambergris, black cedar, and cold night air.</div>
         <div class="p-card-footer">
           <div class="p-card-price">$320</div>
-          <a href="add-to-cart.html"><button class="p-card-btn">+</button></a>
+          <button class="p-card-btn add-to-cart-action">+</button>
         </div>
       </div>
     </div>
@@ -131,7 +131,7 @@
         <div class="p-card-desc">Grown from recycled ocean fibre. A sole that remembers every step it has taken.</div>
         <div class="p-card-footer">
           <div class="p-card-price">$490</div>
-          <a href="add-to-cart.html"><button class="p-card-btn">+</button></a>
+          <button class="p-card-btn add-to-cart-action">+</button>
         </div>
       </div>
     </div>
@@ -235,8 +235,8 @@
   <h2>Own something<br>truly <em>alive</em></h2>
   <p>Every piece in the collection is made to move with you, not sit still. Find the one that calls to you.</p>
   <div class="cta-btns">
-    <a href="browse-collection.html"><button class="btn-glow">Browse Collection</button></a>
-    <a href="learn-more.html"><button class="btn-ghost">Learn More</button></a>
+    <button class="btn-glow" onclick="window.location.href='browse-collection.html'">Browse Collection</button>
+    <button class="btn-ghost" onclick="window.location.href='learn-more.html'">Learn More</button>
   </div>
 </section>
 
