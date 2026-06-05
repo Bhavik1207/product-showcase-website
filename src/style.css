@@ -20,9 +20,7 @@
     font-family: 'Outfit', sans-serif;
     color: var(--chalk);
     overflow-x: hidden;
-    cursor: none;
   }
-  
   /* Restore native text selection cursors and pointer events */
   .hero-title, .hero-desc, h1, h2, h3, p, .s-eyebrow, .s-title, .p-card-name, .p-card-desc, .t-text {
     cursor: text;
@@ -30,29 +28,6 @@
     user-select: text;
   }
 
-  /* ── CUSTOM CURSOR ── */
-  .cursor {
-    position: fixed; top:0; left:0;
-    width: 12px; height: 12px;
-    background: var(--glow1);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    mix-blend-mode: screen;
-    transition: transform .15s ease, width .2s, height .2s, background .2s;
-    transform: translate(-50%,-50%);
-  }
-  .cursor-ring {
-    position: fixed; top:0; left:0;
-    width: 36px; height: 36px;
-    border: 1.5px solid rgba(91,141,238,.5);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%,-50%);
-    transition: transform .35s ease, width .2s, height .2s;
-  }
-  body:hover .cursor { transform: translate(-50%,-50%) scale(1); }
 
   /* ── AMBIENT BACKGROUND BLOBS ── */
   .ambient {
